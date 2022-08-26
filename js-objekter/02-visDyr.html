@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vis dyr øvelse - js_objekter</title>
+  </head>
+  <body>
+    <article></article>
+    <script>
+      const dyr = {
+        navn: "Gris",
+        type: "Pattedyr",
+        billede: "http://mabe-kea.dk/E19/pics/pig.png",
+        levested: "Svinefarme",
+      };
+      console.log(dyr);
+      console.log(
+        `Navn: ${dyr.navn}, Type: ${dyr.type}, Levested, ${dyr.levested}`
+      );
+
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("DOMContentLoaded");
+        const destination = document.querySelector("article");
+        console.log(destination);
+
+        const dyrInfo = `Navn: ${dyr.navn}, Type: ${dyr.type}, Levested, ${dyr.levested}`;
+
+        destination.textContent = dyrInfo;
+
+        let pic = document.createElement("img");
+        pic.src = dyr.billede;
+        destination.appendChild(pic);
+      });
+    </script>
+  </body>
+</html>
