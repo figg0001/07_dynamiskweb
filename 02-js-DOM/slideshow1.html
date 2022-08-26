@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slideshow1</title>
+</head>
+
+<body>
+    <h1>Tro på det...</h1>
+    <img src="billeder/img1.png" alt="billede 1">
+    <button>Videre</button>
+    <P>Billeder venligst udlånt af Rasmus Bregnhøi</P>
+
+    <script>
+        //jeg opretter et array med en billede liste
+        let billeder = ["img1.png", "img2.png", "img3.png", "img4.png", "img5.png", "img6.png","img7.jpg", "img8.jpg"];
+        // der skal klikkes på knap for skifte billede
+
+        const knap = document.querySelector("button");
+        const billede = document.querySelector("img");
+        let antal = billeder.length-1;
+        let nummer = 0;
+console.log(antal);
+        knap.addEventListener("click", skiftBillede);
+
+        //opret funktion til at skifte billede
+        function skiftBillede() {
+            if(nummer<antal){
+            nummer++;
+            console.log(nummer);
+            
+            }
+            else{
+                nummer = 0;
+                knap.textContent = "Videre";
+            }
+            if(nummer==antal){
+                knap.textContent = "Forfra";
+            }
+              billede.src = "billeder/" + billeder[nummer];
+        }
+    </script>
+</body></html>
