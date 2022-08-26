@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JS Objekter</title>
+    <style>
+      section {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 10px;
+      }
+      article {
+        padding: 5px;
+      }
+
+      img {
+        width: 100%;
+        object-fit: contain;
+        filter: sepia(20%);
+
+      }
+      h2{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-transform: uppercase;
+      }
+      p{
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section></section>
+
+    <template>
+      <article>
+        <img src="" alt="" />
+        <h2></h2>
+        <p class="art"></p>
+      </article>
+    </template>
+    <script>
+      let events = [
+        {
+          navn: "Falling Prey",
+          mereinfo: "David Guiraud | Frankrig | 29 min | 2016",
+          billede: "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/CuVAPHpLelt0QBK3bG9dAVXY-360.jpg",
+        },
+        {
+          navn: "Fantasy",
+          mereinfo: "Teemu Nikki | Finland | 9 min | 2016",
+          billede: "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/WG4LXh9Wg2skGUwqYKV4Yqa5-720.jpg",
+        },
+        {
+          navn: "Fauve",
+          mereinfo: "Jeremy Comte | Canada | 16 min | 2018",
+          billede: "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/XKahnVqs9GafHjvJKVvoGTY3-1280.jpg",
+        },
+        {
+          navn: "Fest",
+          mereinfo: "Nikita Diakur | Tyskland | 2 min | 2018",
+          billede: "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/l3oqsfoi66ej2S3C91ulsWaS-1280.jpg",
+        },
+        {
+          navn: "Fibers",
+          mereinfo: "Nynne Steen Mors | Danmark | 4 min | 2015",
+          billede: "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/yeBJZU8EORGNKX0KjeaWNqSB-1280.jpg",
+        },
+      ];
+
+      let container = document.querySelector("section");
+      let temp = document.querySelector("template");
+
+      events.forEach((event) => {
+        let klon = temp.cloneNode(true).content;
+        klon.querySelector("h2").textContent = event.navn;
+        klon.querySelector(".art").textContent = event.mereinfo;
+        klon.querySelector("img").src = event.billede;
+        container.appendChild(klon);
+      });
+    </script>
+  </body>
+</html>
