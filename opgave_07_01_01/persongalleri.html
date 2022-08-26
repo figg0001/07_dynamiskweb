@@ -16,7 +16,7 @@
             padding: 1rem;
         }
         img{
-            max-width: 50%;
+            width: 100%;
             aspect-ratio: 1/1;
             object-fit: contain;
         }
@@ -27,9 +27,9 @@
 
     <template>
         <article>
-            <img src="" alt="">
+            
             <h2 class="fornavn"></h2>
-            <p class="fødselsdag"></p>
+            <img src="" alt="">
             <p class="email"></p>
         </article>
     </template>
@@ -58,7 +58,6 @@
                 klon.querySelector("img").src = "billeder/" + person.billede;
                 klon.querySelector("img").alt = person.fornavn;
                 klon.querySelector(".fornavn").textContent = person.fornavn;
-                klon.querySelector(".fødselsdag").textContent = person.fødselsdag;
                 klon.querySelector(".email").textContent = person.email;
                 holder.appendChild(klon)
             });
