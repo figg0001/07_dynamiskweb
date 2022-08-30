@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  #popup{
+              position: fixed;
+              width: 100vw;
+              height: 100vh;
+              top: 0;
+              left: 0;
+              background-color: #000000AA;
+              display: flex;
+              justify-content: center;
+              display: none;
+              overflow: scroll;
+              z-index: 5;
+          }
+          #popup article{
+              width: 50%;
+              background-color: white;
+              height: 90vh;
+              margin-top: 50px;
+          }
+          #popup p{
+              font-size: 80%;
+          }
+           #holder{
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+              gap:1rem;
+          }
+          nav {
+              display: flex;
+              list-style-type: none;
+              padding: 0.5rem;
+          }
+          article {
+              padding: 1rem;
+              cursor: pointer;
+          }
+  
+          article img{
+              width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    background-size: cover;
+          }
+          
+          #popup img{
+              width: 100%;
+          }
+          button {
+        padding: 10px;
+        text-decoration: none;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 150%;
+        letter-spacing: 1px;
+        color: #000000;
+        text-align: center;
+        margin: 1%;
+        background-color: white;
+        border:black 3px solid;
+      }
+      button:hover {
+          cursor: pointer;
+    text-decoration: underline;
+  }
+      h2{
+          font-family: 'Bebas Neue', cursive;
+          font-size: 160%;
+          margin-top: 10px;
+          margin-bottom: 5px;
+          letter-spacing: 1px;
+      }
+      h1{
+          font-family: 'Bebas Neue', cursive;
+          margin-top: 10px;
+          margin-bottom: 5px;
+          margin-left: 20px;
+          letter-spacing: 1px;
+      }
+      p{
+          font-family: 'Noto Serif HK', serif;
+          font-size: 100%;
+          line-height: 2rem;
+      }
+      .pris {
+    border-bottom: 0.17rem solid black;
+  
+    display: inline-block;
+    padding: 0.2rem;
+  }
+  .main-menu {
+      display: contents;
+      font-size: 150%;
+    }
+  .oprindelsesregion{
+      font-style: italic;
+  }
+  footer {
+    padding-block: 1rem;
+    position: sticky;
+    top: 100vh;
+    margin-top: 40px;
+  }
+  footer p {
+    text-align: center;
+    max-width: none;
+    font-family: 'Noto Serif HK', serif;
+    font-size: 0.7rem;
+  }
+  .toggle-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+    margin-top: 20px;
+  }
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+    margin-left: 20px;
+  }
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  @media (max-width: 740px) {
+    .toggle-btn {
+      display: block;
+    }
+  
+    .main-menu {
+      display: contents;
+      text-align: right;
+    }
+  
+    .main-menu .nav-links {
+      display: none;
+      gap: 0.5rem;
+      font-size: 70%;
+    }
+  
+    .main-menu.shown .nav-links {
+      border-top: 3px solid black;
+      margin-top: 10px;
+      padding-top: 1rem;
+      display: flex;
+      flex: 1 1 100%;
+      flex-flow: column;}
+    }
+    @media (min-width: 680px) {
+      #popup{
+              position: fixed;
+              width: 100vw;
+              height: 100vh;
+              top: 0;
+              left: 0;
+              background-color: #000000AA;
+              display: flex;
+              justify-content: center;
+              display: none;
+              overflow: scroll;
+          }
+          #popup article{
+              width: 50%;
+              background-color: white;
+              height: 90vh;
+              margin-top: 50px;
+          }
+          #popup p{
+              font-size: 100%;
+          }
+          .splash{
+      margin-top: -30px;
+  }
+      
+    }
+  
+  

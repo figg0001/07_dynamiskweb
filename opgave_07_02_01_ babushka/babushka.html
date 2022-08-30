@@ -4,9 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Babushka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+HK:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="svg/favicon.svg" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bistro Babushka</title>
 </head>
 <body>
-    
+    <header>
+        <img class="splash" src="SVG/Tegnebraet1.svg" alt="">
+        <h1>Menu:</h1>
+        <nav class="main-menu">
+            <div class="toggle-btn" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+              </div>
+              <div class="nav-links">
+                <button data-kategori="alle" class="valgt">Alle</button>
+            <button data-kategori="forretter" class="">Forretter</button>
+            <button data-kategori="hovedretter" class="">Hovedretter</button>
+            <button data-kategori="desserter" class="">Desserter</button>
+            <button data-kategori="sideorders" class="">Sides</button>
+            <button data-kategori="drikkevarer" class="">Drikkevarer</button>
+              </div>
+        </nav>
+    </header>
+    <main id="holder"></main>
+        <template>
+            <article>
+                <img class="foto" src="" alt="">
+                <h2 class="navn"></h2>
+                <p class="kortbeskrivelse"></p>
+                <p class="pris"></p>
+            </article>
+        </template>
+        <div id="popup">
+            <article>
+                <img class="foto" src="" alt="">
+                <h2 class="navn"></h2>
+                <p class="langbeskrivelse" ></p>
+                <p class="oprindelsesregion" ></p>
+                <p class="pris"></p>
+            </article>
+        </div>
+        <footer><p>@Figga Vive Andersen 2022</p></footer>
+        <script src="script.js"></script>
 </body>
 </html>
